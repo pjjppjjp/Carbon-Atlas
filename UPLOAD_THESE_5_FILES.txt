@@ -1,0 +1,11 @@
+CARBON ATLAS GITHUB FIX
+
+Upload these 5 files to the ROOT of your existing Carbon-Atlas GitHub repository:
+- index.html
+- app.js
+- viewer.js
+- map.js
+- ecosystems.json
+
+When GitHub asks, commit the changes to main.
+Then wait about 1 minute and hard-refresh the GitHub Pages website.

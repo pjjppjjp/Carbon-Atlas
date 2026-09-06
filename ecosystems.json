@@ -45,7 +45,7 @@
     "photoURL": "https://upload.wikimedia.org/wikipedia/commons/7/74/Seagrass_Zostera_marina_%28Dzharylhach_island%29.jpg",
     "photoThumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Seagrass_Zostera_marina_%28Dzharylhach_island%29.jpg/960px-Seagrass_Zostera_marina_%28Dzharylhach_island%29.jpg",
     "photoSource": "https://commons.wikimedia.org/wiki/File:Seagrass_Zostera_marina_%28Dzharylhach_island%29.jpg",
-    "model": "assets/models/seagrass",
+    "model": "seagrass",
     "carbonSource": "https://www.thebluecarboninitiative.org/about-blue-carbon",
     "modelNote": "Original ecological diorama · approximately 1.8 m wide in AR."
   },
@@ -96,7 +96,7 @@
     "photoURL": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Mangrove_Forest.jpg",
     "photoThumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Mangrove_Forest.jpg/960px-Mangrove_Forest.jpg",
     "photoSource": "https://commons.wikimedia.org/wiki/File:Mangrove_Forest.jpg",
-    "model": "assets/models/mangrove",
+    "model": "mangrove",
     "carbonSource": "https://www.thebluecarboninitiative.org/about-blue-carbon",
     "modelNote": "Original ecological diorama · approximately 1.8 m wide in AR."
   },
@@ -147,7 +147,7 @@
     "photoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Salt_Marsh_at_Fish_Haul_Creek%2C_Hilton_Head_Island.jpg",
     "photoThumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Salt_Marsh_at_Fish_Haul_Creek%2C_Hilton_Head_Island.jpg/960px-Salt_Marsh_at_Fish_Haul_Creek%2C_Hilton_Head_Island.jpg",
     "photoSource": "https://commons.wikimedia.org/wiki/File:Salt_Marsh_at_Fish_Haul_Creek%2C_Hilton_Head_Island.jpg",
-    "model": "assets/models/saltmarsh",
+    "model": "saltmarsh",
     "carbonSource": "https://www.thebluecarboninitiative.org/about-blue-carbon",
     "modelNote": "Original ecological diorama · approximately 1.8 m wide in AR."
   },
@@ -198,7 +198,7 @@
     "photoURL": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Amazon_Manaus_forest.jpg",
     "photoThumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Amazon_Manaus_forest.jpg/960px-Amazon_Manaus_forest.jpg",
     "photoSource": "https://commons.wikimedia.org/wiki/File:Amazon_Manaus_forest.jpg",
-    "model": "assets/models/forest",
+    "model": "forest",
     "carbonSource": "https://science.nasa.gov/earth/earth-observatory/",
     "modelNote": "Original ecological diorama · approximately 1.8 m wide in AR."
   },
@@ -249,7 +249,7 @@
     "photoURL": "https://upload.wikimedia.org/wikipedia/commons/6/67/Kelp_forest.jpg",
     "photoThumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Kelp_forest.jpg/960px-Kelp_forest.jpg",
     "photoSource": "https://commons.wikimedia.org/wiki/File:Kelp_forest.jpg",
-    "model": "assets/models/kelp",
+    "model": "kelp",
     "carbonSource": "https://doi.org/10.1016/j.biocon.2020.108815",
     "modelNote": "Original ecological diorama · approximately 1.8 m wide in AR."
   },
@@ -298,7 +298,7 @@
       "detail": "Near-surface chlorophyll-a in mg/m³. Clouds and missing overpasses create gaps. Pigment concentration is not a species census or carbon credit estimate.",
       "learn": "https://www.earthdata.nasa.gov/news/blog/changes-chlorophyll-layers"
     },
-    "model": "assets/models/plankton",
+    "model": "plankton",
     "carbonSource": "https://www.earthdata.nasa.gov/topics/ocean/ocean-color",
     "modelNote": "Magnified diatom-inspired forms; not life-size."
   },
@@ -349,7 +349,7 @@
     "photoURL": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Great_barrier_reef.JPG",
     "photoThumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Great_barrier_reef.JPG/960px-Great_barrier_reef.JPG",
     "photoSource": "https://commons.wikimedia.org/wiki/File:Great_barrier_reef.JPG",
-    "model": "assets/models/coral",
+    "model": "coral",
     "carbonSource": "https://whc.unesco.org/en/list/154/",
     "modelNote": "Original ecological diorama · approximately 1.8 m wide in AR."
   }
