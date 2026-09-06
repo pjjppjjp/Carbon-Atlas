@@ -1,0 +1,29 @@
+CARBON ATLAS — REPLACE YOUR EXISTING GITHUB PAGES FILES
+Build 1.1.0
+
+1. Unzip this download. Open Carbon_Atlas_GitHub_Replacement.
+2. In your existing GitHub repository, open the publishing folder that
+   currently contains the working index.html (usually the repository root).
+3. Choose Add file > Upload files.
+4. Drag EVERYTHING INSIDE this replacement folder into that folder.
+   Include index.html, diagnostics.html and the assets, css, data and js
+   folders. Commit the changes. Replace matching old files.
+5. Wait for the Pages deployment to finish, then reload your existing
+   HTTPS website address. Hard-refresh once to clear the old page.
+
+IMPORTANT
+- Upload the contents, not the ZIP itself.
+- Do not nest the site inside an extra Carbon_Atlas_GitHub_Replacement folder.
+- Do not put the replacement inside an app folder unless that is genuinely
+  the path your existing published website uses.
+- Keep existing CNAME and .github files/settings.
+- Keep your currently working Pages publishing branch and folder.
+- Models are updated too: do not upload only the HTML/JavaScript.
+
+The existing dark interface is retained. All seven GLB/USDZ assets now have
+embedded color textures. Camera view remains inside the site's interface.
+Camera view uses manual positioning; optional floor AR uses device tracking.
+
+Camera/AR: open the HTTPS site, not a local HTML file, and allow the camera.
+Data filter checks: open diagnostics.html on the deployed site.
+Full instructions and verification notes are in README.md and docs/.

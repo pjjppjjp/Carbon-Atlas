@@ -1,0 +1,15 @@
+{
+  "passed": 8,
+  "checks": [
+    "NASA publisher-view link follows selected observation date",
+    "Rejected immersive session returns to same branded viewer",
+    "In-page camera still usable after rejected floor-AR session",
+    "Permission completion after cancellation stops newly acquired tracks",
+    "Diagnostics page receives all seven protocol fixtures through real adapters",
+    "Diagnostics enables JSON export after completing requests",
+    "Diagnostics cancellation aborts transfer and restores controls",
+    "Postflight checks have no uncaught JavaScript errors"
+  ],
+  "errors": [],
+  "fixtures": "Synthetic service responses, permission stream and rejected WebXR request; physical phone AR not tested."
+}

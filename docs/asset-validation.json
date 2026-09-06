@@ -1,0 +1,70 @@
+{
+  "models": [
+    {
+      "model": "coral",
+      "passed": true,
+      "vertices": 36818,
+      "triangles": 14048,
+      "palette_matches_viewer_exactly": true,
+      "texture_embedded": true,
+      "usdz_alignment": true
+    },
+    {
+      "model": "forest",
+      "passed": true,
+      "vertices": 85112,
+      "triangles": 29936,
+      "palette_matches_viewer_exactly": true,
+      "texture_embedded": true,
+      "usdz_alignment": true
+    },
+    {
+      "model": "kelp",
+      "passed": true,
+      "vertices": 71996,
+      "triangles": 26420,
+      "palette_matches_viewer_exactly": true,
+      "texture_embedded": true,
+      "usdz_alignment": true
+    },
+    {
+      "model": "mangrove",
+      "passed": true,
+      "vertices": 34181,
+      "triangles": 12872,
+      "palette_matches_viewer_exactly": true,
+      "texture_embedded": true,
+      "usdz_alignment": true
+    },
+    {
+      "model": "plankton",
+      "passed": true,
+      "vertices": 106964,
+      "triangles": 36848,
+      "palette_matches_viewer_exactly": true,
+      "texture_embedded": true,
+      "usdz_alignment": true
+    },
+    {
+      "model": "saltmarsh",
+      "passed": true,
+      "vertices": 111056,
+      "triangles": 39104,
+      "palette_matches_viewer_exactly": true,
+      "texture_embedded": true,
+      "usdz_alignment": true
+    },
+    {
+      "model": "seagrass",
+      "passed": true,
+      "vertices": 86448,
+      "triangles": 30596,
+      "palette_matches_viewer_exactly": true,
+      "texture_embedded": true,
+      "usdz_alignment": true
+    }
+  ],
+  "real_localhost_requests_passed": 8,
+  "relative_imports_exist": true,
+  "physical_native_viewer": "Not available in this environment"
+}

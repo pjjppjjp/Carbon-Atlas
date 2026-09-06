@@ -1,0 +1,30 @@
+PASS Exactly seven distinct ecosystems; seagrass first
+PASS Seven geographic reference pins and primary sources
+PASS All GLB, USDZ and interleaved assets are present and correctly sized
+PASS Web Mercator round trips including antimeridian
+PASS Projection clamps the poles
+PASS Haversine one equatorial degree
+PASS Great-circle path endpoints
+PASS Antipodal great-circle fallback stays finite
+PASS Scenario baseline is exactly 100
+PASS Zero-loss, zero-recovery scenario is flat
+PASS Compounding matches independent arithmetic
+PASS Scenario before intervention has identical paths
+PASS Scenarios remain finite and ordered throughout parameter grid
+PASS Valid GeoJSON accepted; invalid coordinates rejected
+PASS Import limits reject excessive feature counts
+PASS MVT protobuf decodes a point with the provider coordinates
+PASS MVT line and closed polygon commands decoded
+PASS Truncated vector tiles rejected
+PASS Matrix multiplication preserves translation and scale
+PASS New forest WMS endpoint, layer, CRS and observation epoch
+PASS Legacy WMS transport uses srs rather than crs
+PASS Only chlorophyll consumes the observation-date control
+PASS Vector endpoint is z/y/x, not x/y/z
+PASS Tile bounds preserve eastern hemisphere and southern latitude
+PASS Forest mask keeps only ESA tree class, not water, grass or transparent data
+PASS Bounded fetch parses JSON while timeout is still active
+PASS Stalled response body is actually timed out
+PASS Caller cancellation is not misreported as timeout
+
+28 unit checks passed.

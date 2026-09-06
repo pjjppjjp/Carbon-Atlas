@@ -1,0 +1,281 @@
+{
+  "build": "1.1.0",
+  "http_files_passed": 54,
+  "files": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "bytes": 13030
+    },
+    {
+      "file": "LICENSE",
+      "status": 200,
+      "bytes": 1482
+    },
+    {
+      "file": "UPLOAD-INSTRUCTIONS.txt",
+      "status": 200,
+      "bytes": 1531
+    },
+    {
+      "file": "_headers",
+      "status": 200,
+      "bytes": 333
+    },
+    {
+      "file": "diagnostics.html",
+      "status": 200,
+      "bytes": 2272
+    },
+    {
+      "file": ".nojekyll",
+      "status": 200,
+      "bytes": 0
+    },
+    {
+      "file": "README.md",
+      "status": 200,
+      "bytes": 6575
+    },
+    {
+      "file": "css/style.css",
+      "status": 200,
+      "bytes": 51894
+    },
+    {
+      "file": "docs/postflight-results.json",
+      "status": 200,
+      "bytes": 725
+    },
+    {
+      "file": "docs/TESTING.md",
+      "status": 200,
+      "bytes": 3290
+    },
+    {
+      "file": "docs/asset-validation.json",
+      "status": 200,
+      "bytes": 1692
+    },
+    {
+      "file": "docs/SOURCES.md",
+      "status": 200,
+      "bytes": 9282
+    },
+    {
+      "file": "docs/unit-test-results.txt",
+      "status": 200,
+      "bytes": 1517
+    },
+    {
+      "file": "docs/UPDATE-NOTES.md",
+      "status": 200,
+      "bytes": 6299
+    },
+    {
+      "file": "docs/browser-test-results.json",
+      "status": 200,
+      "bytes": 3420
+    },
+    {
+      "file": "data/ecosystems.json",
+      "status": 200,
+      "bytes": 23516
+    },
+    {
+      "file": "assets/mark.svg",
+      "status": 200,
+      "bytes": 293
+    },
+    {
+      "file": "js/icons.js",
+      "status": 200,
+      "bytes": 3143
+    },
+    {
+      "file": "js/utils.js",
+      "status": 200,
+      "bytes": 3130
+    },
+    {
+      "file": "js/camera.js",
+      "status": 200,
+      "bytes": 2117
+    },
+    {
+      "file": "js/layers.js",
+      "status": 200,
+      "bytes": 14652
+    },
+    {
+      "file": "js/viewer.js",
+      "status": 200,
+      "bytes": 12747
+    },
+    {
+      "file": "js/app.js",
+      "status": 200,
+      "bytes": 42613
+    },
+    {
+      "file": "js/diagnostics.js",
+      "status": 200,
+      "bytes": 3011
+    },
+    {
+      "file": "js/map.js",
+      "status": 200,
+      "bytes": 14816
+    },
+    {
+      "file": "assets/models/coral.bin",
+      "status": 200,
+      "bytes": 1517184
+    },
+    {
+      "file": "assets/models/mangrove.json",
+      "status": 200,
+      "bytes": 178
+    },
+    {
+      "file": "assets/models/seagrass.bin",
+      "status": 200,
+      "bytes": 3304368
+    },
+    {
+      "file": "assets/models/forest.glb",
+      "status": 200,
+      "bytes": 3085224
+    },
+    {
+      "file": "assets/models/kelp.usdz",
+      "status": 200,
+      "bytes": 6303455
+    },
+    {
+      "file": "assets/models/kelp.json",
+      "status": 200,
+      "bytes": 174
+    },
+    {
+      "file": "assets/models/plankton.glb",
+      "status": 200,
+      "bytes": 3866884
+    },
+    {
+      "file": "assets/models/coral.json",
+      "status": 200,
+      "bytes": 175
+    },
+    {
+      "file": "assets/models/seagrass.json",
+      "status": 200,
+      "bytes": 180
+    },
+    {
+      "file": "assets/models/coral.usdz",
+      "status": 200,
+      "bytes": 3230591
+    },
+    {
+      "file": "assets/models/saltmarsh.bin",
+      "status": 200,
+      "bytes": 4223232
+    },
+    {
+      "file": "assets/models/seagrass.glb",
+      "status": 200,
+      "bytes": 3136436
+    },
+    {
+      "file": "assets/models/plankton.json",
+      "status": 200,
+      "bytes": 179
+    },
+    {
+      "file": "assets/models/saltmarsh.json",
+      "status": 200,
+      "bytes": 180
+    },
+    {
+      "file": "assets/models/mangrove.usdz",
+      "status": 200,
+      "bytes": 3000656
+    },
+    {
+      "file": "assets/models/kelp.bin",
+      "status": 200,
+      "bytes": 2853360
+    },
+    {
+      "file": "assets/models/mangrove.bin",
+      "status": 200,
+      "bytes": 1390176
+    },
+    {
+      "file": "assets/models/kelp.glb",
+      "status": 200,
+      "bytes": 2623060
+    },
+    {
+      "file": "assets/models/saltmarsh.glb",
+      "status": 200,
+      "bytes": 4025836
+    },
+    {
+      "file": "assets/models/plankton.bin",
+      "status": 200,
+      "bytes": 3979584
+    },
+    {
+      "file": "assets/models/forest.json",
+      "status": 200,
+      "bytes": 178
+    },
+    {
+      "file": "assets/models/plankton.usdz",
+      "status": 200,
+      "bytes": 9337734
+    },
+    {
+      "file": "assets/models/coral.glb",
+      "status": 200,
+      "bytes": 1348632
+    },
+    {
+      "file": "assets/models/seagrass.usdz",
+      "status": 200,
+      "bytes": 7565298
+    },
+    {
+      "file": "assets/models/saltmarsh.usdz",
+      "status": 200,
+      "bytes": 9720782
+    },
+    {
+      "file": "assets/models/forest.usdz",
+      "status": 200,
+      "bytes": 7434033
+    },
+    {
+      "file": "assets/models/forest.bin",
+      "status": 200,
+      "bytes": 3233088
+    },
+    {
+      "file": "assets/models/mangrove.glb",
+      "status": 200,
+      "bytes": 1250252
+    },
+    {
+      "file": "assets/geo/world.json",
+      "status": 200,
+      "bytes": 404281
+    }
+  ],
+  "imports_checked": 12,
+  "max_file_bytes": 9720782,
+  "no_external_dependencies_for_UI_or_models": true,
+  "deployment": "Folder prepared; not uploaded to user GitHub repository in this task",
+  "external_service_status": "Not implied by local HTTP checks"
+}
