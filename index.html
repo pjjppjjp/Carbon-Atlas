@@ -628,22 +628,27 @@ async function openViewer(id=state.selected){
  $('#model-loading').hidden=false;$('#model-loading').textContent='Opening embedded colour model…';$('#mode-camera').disabled=true;
  $('#carbon-hotspots').hidden=true;$('#carbon-toggle').classList.remove('active');$('#carbon-toggle').setAttribute('aria-pressed','false');
  $('#start-ar').disabled=true;$('#quicklook').hidden=true;$('#native-android').hidden=true;$('#start-ar').hidden=false;
- $('#ar-state').textContent='The 3D model and camera view stay inside Carbon Atlas.';
- $('#model-scale').textContent=id==='plankton'?'Magnified diatoms · illustrative display':'Approx. 1.8 m wide · embedded habitat';
+ $('#ar-state').textContent='Choose floor AR on supported devices or switch to camera view inside Carbon Atlas.';
+ $('#model-scale').textContent=id==='plankton'?'Magnified diatoms · illustrative display':'Approx. 1.8 m wide · floor placement ready';
  if(!$('#viewer-dialog').open)$('#viewer-dialog').showModal();
  try {
   if(!viewer)viewer=new HabitatViewer($('#model-canvas'));
   const loaded=await viewer.load(id);if(!loaded||ticket!==viewerTicket||!$('#viewer-dialog').open)return;
   viewer.autoRotate=true;$('#rotate-model').classList.add('active');$('#rotate-model').setAttribute('aria-pressed','true');$('#rotate-model').innerHTML=icon('pause')+'Auto orbit';
   $('#model-loading').hidden=true;$('#start-ar').disabled=false;$('#mode-camera').disabled=false;
-  $('#download-model').href=e.model+'.glb?v=3.0.0-model-fix';$('#download-model').download='carbon-atlas-'+id+'.glb';
+  const profile={iOS:/iPhone|iPad|iPod/.test(navigator.userAgent)||(/Mac/.test(navigator.platform)&&navigator.maxTouchPoints>1),android:/Android/i.test(navigator.userAgent)};
+  const glbPath=e.model+'.glb?v=4.0.0-ar';
+  const usdzPath=e.model+'.usdz?v=4.0.0-ar';
+  $('#download-model').href=glbPath;$('#download-model').download='carbon-atlas-'+id+'.glb';
+  $('#quicklook').href=usdzPath;$('#quicklook').setAttribute('rel','ar');$('#quicklook').setAttribute('aria-label','Open Apple floor AR');
+  $('#native-android').dataset.glb=e.model+'.glb';
   xrAvailable=false;
   try{xrAvailable=!!(navigator.xr&&isSecureContext&&await navigator.xr.isSessionSupported('immersive-ar'));}catch{}
   if(ticket!==viewerTicket)return;
-  $('#quicklook').hidden=true;
-  $('#native-android').hidden=true;
-  $('#start-ar').innerHTML=icon('scan')+(xrAvailable?'Place on floor':'Open camera');
-  $('#ar-state').textContent=xrAvailable?'Device-tracked floor AR · Carbon Atlas controls remain visible.':'Camera view stays inside Carbon Atlas with manual placement.';
+  $('#quicklook').hidden=!(profile.iOS&&!xrAvailable);
+  $('#native-android').hidden=!(profile.android&&!xrAvailable);
+  $('#start-ar').innerHTML=icon('scan')+(xrAvailable?'Place on floor':profile.iOS?'Open Apple floor AR':profile.android?'Open Android floor AR':'Open camera');
+  $('#ar-state').textContent=xrAvailable?'Device-tracked floor AR · Carbon Atlas controls remain visible.':profile.iOS?'Native floor AR is ready for iPhone and iPad.':profile.android?'Native floor AR is ready for supported Android devices.':'Camera view stays inside Carbon Atlas with manual placement.';
  }catch(err){
   if(ticket!==viewerTicket||!$('#viewer-dialog').open)return;
   $('#model-loading').innerHTML=`<div class="model-error"><strong>The habitat could not open.</strong><p>${esc(err.message)}</p><button id="retry-model" class="secondary-btn">Retry model</button></div>`;
@@ -675,12 +680,17 @@ async function startCamera(){
 async function startAR(){
  if(!viewer?.count){toast('The 3D habitat is still loading.');return;}
  if(camera?.active){resetCameraUI();return;}
- if(!xrAvailable){await startCamera();return;}
+ const profile={iOS:/iPhone|iPad|iPod/.test(navigator.userAgent)||(/Mac/.test(navigator.platform)&&navigator.maxTouchPoints>1),android:/Android/i.test(navigator.userAgent)};
+ if(!xrAvailable){
+  if(profile.iOS&&$('#quicklook')?.href){$('#quicklook').click();return;}
+  if(profile.android&&$('#native-android')&&!$('#native-android').hidden){nativeAndroid();return;}
+  await startCamera();return;
+ }
  camera?.stop();$('#start-ar').disabled=true;state.xrRunning=true;ignoreXRClose=true;$('#viewer-dialog').close();
  try{await viewer.beginXR({overlay:$('#xr-overlay'),onState:(msg,hit,placed)=>{$('#xr-guide').textContent=msg;$('#place-ar').disabled=!hit||placed;$('#place-ar').hidden=placed;$('#replace-ar').hidden=!placed;},onEnd:()=>{state.xrRunning=false;if(!$('#viewer-dialog').open)$('#viewer-dialog').showModal();$('#start-ar').disabled=false;$('#ar-scale').value=100;}});}
  catch(err){state.xrRunning=false;if(!$('#viewer-dialog').open)$('#viewer-dialog').showModal();$('#start-ar').disabled=false;$('#camera-notice').hidden=false;$('#camera-notice').textContent='Floor tracking is not available in this session. Camera view provides in-page manual placement.';xrAvailable=false;$('#start-ar').innerHTML=icon('scan')+'Open camera';}
 }
-function nativeAndroid(){ startCamera(); }
+function nativeAndroid(){const e=current();if(!/Android/i.test(navigator.userAgent)){startCamera();return;}const file=new URL((document.getElementById('native-android').dataset.glb||e.model+'.glb'),location.href).href;const fallback=location.href;location.href='intent://arvr.google.com/scene-viewer/1.0?file='+encodeURIComponent(file)+'&mode=ar_preferred&title='+encodeURIComponent(e.name)+'#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url='+encodeURIComponent(fallback)+';end;'; }
 async function share(){const e=current();if(location.protocol==='file:'){toast('Share the ZIP or deploy the app folder to obtain a shareable HTTPS address.');return;}const url=new URL(location.href);url.hash='ecosystem='+e.id;try{if(navigator.share){await navigator.share({title:'Carbon Atlas · '+e.name,text:e.lead,url:url.href});return;}if(navigator.clipboard){await navigator.clipboard.writeText(url.href);toast('Ecosystem link copied.');return;}}catch(err){if(err.name==='AbortError')return;}modal(`<span class="eyebrow">SHARE THE ATLAS</span><h2>Pass on a carbon story.</h2><p class="modal-lead">Copy this ecosystem address.</p><input id="share-url" aria-label="Ecosystem address" class="share-input" readonly value="${esc(url.href)}">`);$('#share-url').select();}
 async function modelHealth(){
  const report={build:BUILD,url:location.href,core:'embedded in index.html',models:[]};
