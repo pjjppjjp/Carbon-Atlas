@@ -624,7 +624,8 @@ const ecosystemContributors={
  forest:{name:'ภัควัฒน์ จินารักษ์พงศ์',number:'16',room:'511'},
  mangrove:{name:'ปัณณวิชญ์ ลัคนทิน',number:'5',room:'511'},
  plankton:{name:'พีรวิชญ์ กิจคุณาเสถียร',number:'11',room:'511'},
- kelp:{name:'วสพล ชัยหิรัญวัฒนา',number:'13',room:'511'}
+ kelp:{name:'วสพล ชัยหิรัญวัฒนา',number:'13',room:'511'},
+ saltmarsh:{name:'กิตติสพล ภีมรัชตธำรงค์',number:'12',room:'511'}
 };
 function contributorCard(e){const c=ecosystemContributors[e.id];if(!c)return '';return `<section class="student-credit" aria-label="Student contributor"><span class="eyebrow">ECOSYSTEM CONTRIBUTOR</span><div class="student-credit-name">${esc(c.name)}</div><div class="student-credit-meta"><span><strong>เลขที่ / No.</strong> ${esc(c.number)}</span><i aria-hidden="true"></i><span><strong>ห้อง / Room</strong> ${esc(c.room)}</span></div></section>`;}
 function renderDetail(e){const active=layers.active.has(e.id);$('#detail').style.setProperty('--eco',e.color);$('#detail').innerHTML=`
